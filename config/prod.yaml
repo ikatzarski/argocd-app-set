@@ -1,6 +1,6 @@
 values: |
   nginx-1:
-    repoURL: https://github.com/ikatzarski/argo-test.git
+    repoURL: https://github.com/ikatzarski/argocd-app-set.git
     targetRevision: HEAD
     path: ./charts/nginx-1
     env: prod
@@ -20,7 +20,7 @@ values: |
         imagePullPolicy: IfNotPresent
 
   nginx-2:
-    repoURL: https://github.com/ikatzarski/argo-test.git
+    repoURL: https://github.com/ikatzarski/argocd-app-set.git
     targetRevision: HEAD
     path: ./charts/nginx-2
     env: prod
