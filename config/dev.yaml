@@ -34,7 +34,7 @@ values: |
 
       deployment:
         name: nginx-2-dev
-        replicas: 3
+        replicas: 1
         image: nginx
         containerHttpPort: 80
         imagePullPolicy: IfNotPresent
