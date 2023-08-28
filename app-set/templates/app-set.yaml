@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: nginx
+  name: nginx-{{ .Values.env }}
   namespace: argocd
 spec:
   generators:
@@ -13,7 +13,7 @@ spec:
           - path: {{ .Values.configFile }}
   template:
     metadata:
-      name: nginx
+      name: nginx-{{ .Values.env }}
     spec:
       project: default
       source:
