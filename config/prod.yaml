@@ -3,6 +3,7 @@ values: |
     repoURL: https://github.com/ikatzarski/argo-test.git
     targetRevision: HEAD
     path: ./charts/nginx-1
+    env: prod
     namespace: prod
     chartConfig:
       appSelector: nginx-1-prod
@@ -22,6 +23,7 @@ values: |
     repoURL: https://github.com/ikatzarski/argo-test.git
     targetRevision: HEAD
     path: ./charts/nginx-2
+    env: prod
     namespace: prod
     chartConfig:
       appSelector: nginx-2-prod

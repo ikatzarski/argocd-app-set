@@ -3,6 +3,7 @@ values: |
     repoURL: https://github.com/ikatzarski/argocd-app-set.git
     targetRevision: HEAD
     path: ./charts/nginx-1
+    env: dev
     namespace: dev
     chartConfig:
       appSelector: nginx-1-dev
@@ -22,6 +23,7 @@ values: |
     repoURL: https://github.com/ikatzarski/argocd-app-set.git
     targetRevision: HEAD
     path: ./charts/nginx-2
+    env: dev
     namespace: dev
     chartConfig:
       appSelector: nginx-2-dev
