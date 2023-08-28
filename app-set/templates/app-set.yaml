@@ -1,0 +1,32 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: nginx
+  namespace: argocd
+spec:
+  generators:
+    - git:
+        repoURL: {{ .Values.configRepo }}
+        revision: {{ .Values.configRevision }}
+        files:
+          - path: {{ .Values.configFile }}
+  template:
+    metadata:
+      name: nginx
+    spec:
+      project: default
+      source:
+        repoURL: {{ .Values.appsRepo }}
+        targetRevision: {{ .Values.appsRevision }}
+        path: {{ .Values.appsChart }}
+        helm:
+          values: {{ printf "'{{values}}'" }}
+      destination:
+        server: https://kubernetes.default.svc
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true

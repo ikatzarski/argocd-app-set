@@ -1,0 +1,9 @@
+apiVersion: v2
+name: app-set
+description: An Argo App Set
+
+type: application
+
+version: 1.0.0
+
+appVersion: "1.0.0"

@@ -1,0 +1,38 @@
+values: |
+  nginx-1:
+    repoURL: https://github.com/ikatzarski/argo-test.git
+    targetRevision: HEAD
+    path: ./charts/nginx-1
+    namespace: prod
+    chartConfig:
+      appSelector: nginx-1-prod
+
+      service:
+        name: nginx-1-prod
+        port: 80
+
+      deployment:
+        name: nginx-1-prod
+        replicas: 1
+        image: nginx
+        containerHttpPort: 80
+        imagePullPolicy: IfNotPresent
+
+  nginx-2:
+    repoURL: https://github.com/ikatzarski/argo-test.git
+    targetRevision: HEAD
+    path: ./charts/nginx-2
+    namespace: prod
+    chartConfig:
+      appSelector: nginx-2-prod
+
+      service:
+        name: nginx-2-prod
+        port: 80
+
+      deployment:
+        name: nginx-2-prod
+        replicas: 1
+        image: nginx
+        containerHttpPort: 80
+        imagePullPolicy: IfNotPresent

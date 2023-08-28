@@ -1,0 +1,9 @@
+apiVersion: v2
+name: nginx-1
+description: An Argo App for NGINX 1
+
+type: application
+
+version: 1.0.0
+
+appVersion: "1.0.0"
