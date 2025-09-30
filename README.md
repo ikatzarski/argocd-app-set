@@ -54,7 +54,7 @@ Install the App Set in a 'prod' or a 'dev' namespace:
 
 ## App Set Hierarchy
 
-![App Set Hierarchy](images/app-set.drawio.png)
+![App Set Hierarchy](images/app-set.png)
 
 # Cleanup
 
